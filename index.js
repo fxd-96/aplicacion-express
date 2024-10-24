@@ -61,7 +61,7 @@ app.post('/agrega_todo', jsonParser, function (req, res) {
 // Endpoint de prueba
 app.get('/', function (req, res) {
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 'status': 'ok' }));
+    res.end(JSON.stringify({ 'status': 'ok-conectado' }));
 });
 
 // Corremos el servidor en el puerto 3000
