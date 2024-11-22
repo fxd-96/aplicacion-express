@@ -41,7 +41,7 @@ app.post('/insert', jsonParser, function (req, res) {
     
 
     if (!todo) {
-        res.status(400).send('Falta información necesaria');
+        res.status(400).send('Falta información. formato incorrecto usa referencia : ');
         return;
     }
     const stmt  =  db.prepare('INSERT INTO todos (todo, created_at) VALUES (?, CURRENT_TIMESTAMP)');
@@ -69,7 +69,7 @@ app.post('/insert', jsonParser, function (req, res) {
 app.get('/', function (req, res) {
     //Enviamos de regreso la respuesta
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 'status': 'ok2' }));
+    res.end(JSON.stringify({ 'status': 'ok-GOD' }));
 })
 
 
@@ -80,7 +80,7 @@ app.post('/login', jsonParser, function (req, res) {
 
     //Enviamos de regreso la respuesta
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 'status': 'ok' }));
+    res.end(JSON.stringify({ 'stats': '!OK' }));
 })
 
 //Corremos el servidor en el puerto 3000
